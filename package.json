@@ -1,0 +1,18 @@
+{
+    "version": "0.1",
+    "name": "cordova-plugin-bitalino",
+    "cordova_name": "BITalino",
+    "description": "Cordova BITalino Plugin",
+    "license": "Apache 2.0",
+    "repo": "https:/github.com/duxan/cordova-plugin-bitalino.git",
+    "issue": "",
+    "keywords": [
+        "cordova",
+        "bitalino"
+    ],
+    "platforms": [
+        "android",
+    ],
+    "engines": [],
+    "englishdoc": ""
+}

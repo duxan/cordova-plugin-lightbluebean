@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-plugin-bitalino"
+    version="0.1">
+    <name>Cordova BITalino Plugin</name>
+    <description>BITalino Java SDK port for HTML5</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,bitalino</keywords>
+    <repo>https:\\github.com\duxan\cordova-plugin-bitalino.git</repo>
+    <issue></issue>
+
+   <!--  <asset src="www/BITalinoPlugin.js" target="BITalinoPlugin.js"/> -->
+    <js-module src="www/BITalinoPlugin.js" name="BITalinoPlugin">
+        <clobbers target="BITalinoPlugin" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="BITalinoPlugin" >
+                <param name="android-package" value="co.duxan.bitalino.BITalinoPlugin"/>
+                <param name="onload" value="false" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/co/duxan/bitalino/BITalinoPlugin.java" target-dir="src/co/duxan/bitalino" />
+        <!-- compiled Java SDK -->
+        <source-file src="libs/guava-16.0.1.jar" target-dir="libs" />
+        <source-file src="libs/bitalino-java-sdk-1.1-SNAPSHOT.jar" target-dir="libs" />
+<!--    
+        <source-file src="src/main/java/com/bitalino/comm/BITalinoDevice.java" target-dir="src/co/duxan/cordova-plugin-bitalino/JavaSDK" />
+        <source-file src="src/main/java/com/bitalino/comm/BITalinoSocket.java" target-dir="src/co/duxan/cordova-plugin-bitalino/JavaSDK" />
+        <source-file src="src/main/java/com/bitalino/comm/BITalinoFrame.java" target-dir="src/co/duxan/cordova-plugin-bitalino/JavaSDK" />
+        <source-file src="src/main/java/com/bitalino/comm/BITalinoFrameDecoder.java" target-dir="src/co/duxan/cordova-plugin-bitalino/JavaSDK" />
+        <source-file src="src/main/java/com/bitalino/comm/BITalinoErrorTypes.java" target-dir="src/co/duxan/cordova-plugin-bitalino/JavaSDK" />
+        <source-file src="src/main/java/com/bitalino/comm/BITalinoException.java" target-dir="src/co/duxan/cordova-plugin-bitalino/JavaSDK" />
+        <source-file src="src/main/java/com/bitalino/util/SensorDataConverter.java" target-dir="src/co/duxan/cordova-plugin-bitalino/JavaSDKutil" /> 
+-->
+    </platform>
+</plugin>
