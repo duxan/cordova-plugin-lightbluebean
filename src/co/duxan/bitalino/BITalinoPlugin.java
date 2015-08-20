@@ -261,7 +261,7 @@ public class BITalinoPlugin extends CordovaPlugin {
 				bitalino.stop();
 				sock.close();
 				Log.i(TAG, "BITalino is stopped.");
-				status = "Collecting 1000 frames done!";
+				status = "Collecting 10000 frames done!";
 
 			} catch (Exception e) {
 				Log.e(TAG, "There was an error. Be sure that Bluetooth is ON and BITalino paired", e);
@@ -278,6 +278,9 @@ public class BITalinoPlugin extends CordovaPlugin {
 					Toast toast = Toast.makeText(cordova.getActivity().getApplicationContext(), msg, duration);
 					toast.show();
 				};
+				// retValue on end
+				PluginResult retValue = new PluginResult(PluginResult.Status.OK, frame.toString());
+				myCallbackContext.sendPluginResult(retValue);
 			});
 		}
 
@@ -288,7 +291,7 @@ public class BITalinoPlugin extends CordovaPlugin {
 				//if (seriesPort1.size() > 2500)
 				//	seriesPort1.removeFirst();
 
-				// read value to status each 3 frames 
+				// read value to log and retValue each 3 frames 
 				if (frameCounter % 3 == 0){
 					Log.i(TAG, "DATA: " + frame);
 					PluginResult retValue = new PluginResult(PluginResult.Status.OK, frame.toString());
