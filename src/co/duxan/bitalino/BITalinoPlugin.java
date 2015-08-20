@@ -241,7 +241,7 @@ public class BITalinoPlugin extends CordovaPlugin {
 				sock = dev.createRfcommSocketToServiceRecord(MY_UUID);
 				sock.connect();
 
-				BITalinoDevice bitalino = new BITalinoDevice(1000, new int[]{0, 1, 2, 3, 4, 5});
+				BITalinoDevice bitalino = new BITalinoDevice(10000, new int[]{0, 1, 2, 3, 4, 5});
 				Log.i(TAG, "Connecting to BITalino [" + macAddress + "] ...");
 				bitalino.open(sock.getInputStream(), sock.getOutputStream());
 				Log.i(TAG, "Connected.");
