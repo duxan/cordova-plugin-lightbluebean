@@ -102,6 +102,8 @@ public class BITalinoPlugin extends CordovaPlugin {
                    	task.execute(mac);
                 }
             }); 
+            pluginResult.setKeepCallback(true);
+            callbackContext.sendPluginResult(pluginResult); // initially empty
 			return true;
 
 		} else {
@@ -278,11 +280,10 @@ public class BITalinoPlugin extends CordovaPlugin {
 					Toast toast = Toast.makeText(cordova.getActivity().getApplicationContext(), msg, duration);
 					toast.show();
 				};
-				// retValue on end
-				PluginResult retValueEnd = new PluginResult(PluginResult.Status.OK, msg.toString());
-				retValue.setKeepCallback(true);
-				myCallbackContext.sendPluginResult(retValueEnd);
 			});
+			PluginResult retValue = new PluginResult(PluginResult.Status.OK, result);
+			retValue.setKeepCallback(true);
+			myCallbackContext.sendPluginResult(retValue);
 		}
 
 		@Override
