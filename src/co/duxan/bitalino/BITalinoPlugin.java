@@ -279,8 +279,8 @@ public class BITalinoPlugin extends CordovaPlugin {
 					toast.show();
 				};
 				// retValue on end
-				PluginResult retValue = new PluginResult(PluginResult.Status.OK, frame.toString());
-				myCallbackContext.sendPluginResult(retValue);
+				PluginResult retValueEnd = new PluginResult(PluginResult.Status.OK, frame.toString());
+				myCallbackContext.sendPluginResult(retValueEnd);
 			});
 		}
 
