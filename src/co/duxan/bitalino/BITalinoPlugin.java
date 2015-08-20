@@ -288,21 +288,21 @@ public class BITalinoPlugin extends CordovaPlugin {
 				//if (seriesPort1.size() > 2500)
 				//	seriesPort1.removeFirst();
 
-				// read value to log each 500 frames 
-				if (frameCounter % 500 == 0){
+				// read value to status each 3 frames 
+				if (frameCounter % 3 == 0){
 					Log.i(TAG, "DATA: " + frame);
 					PluginResult retValue = new PluginResult(PluginResult.Status.OK, frame.toString());
 					retValue.setKeepCallback(true);
 					myCallbackContext.sendPluginResult(retValue);
 
-					// read some values to UI
-					if (frameCounter < 1500) {
+					// read some values to UI via toast for debbuging // turned off
+					if (frameCounter < 10) {
 						final String msg = frame.toString();
 						cordova.getActivity().runOnUiThread(new Runnable() {
 							int duration = Toast.LENGTH_SHORT;
 							public void run() {
 								Toast toast = Toast.makeText(cordova.getActivity().getApplicationContext(), msg, duration);
-								toast.show();
+								//toast.show();
 							};
 						});
 					}
