@@ -2,9 +2,9 @@
 =============================================
 
 This plugin is HTML5 port of [BITalino Java SDK](https://github.com/BITalinoWorld/java-sdk).
-Java SDK version is 1.1.-SNAPSHOT and it is provided with the plugin.
+Java SDK version is 1.1.-SNAPSHOT (built as dependency via gradle).
 
-If features basic BITalino protocol and utilities for read/write from BITalino devices, for ANDROID only.
+If features basic BITalino protocol, for ANDROID only.
 
 Bluetooth connection management is not included.
 
@@ -14,7 +14,7 @@ Plugin has been tested with Cordova 5.0.0., Android 4.4.2.
 - New project: `cordova create hello com.example.hello HelloWorld`
 - Add platform: `cordova platform add android`
 - Download and install plugin: `cordova plugin add https:\\github.com\duxan\cordova-plugin-bitalino.git`
-- Build and run: `cordova build`, `cordova run`
+- Build and run: `cordova build`, `cordova run --nobuild`
 
 ## Usage
 - NO need to include JS files in index.html
