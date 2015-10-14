@@ -2,7 +2,7 @@
 =============================================
 
 This plugin is HTML5 port of [Bean SDK](https://github.com/PunchThrough/Bean-Android-SDK).
-Java SDK version is 1.0.1. (built as dependency via gradle).
+Works with Android only, min version 18. Java SDK version is 1.0.0. (built as dependency via gradle). 
 
 ## Install
 - New project: `cordova create hello com.example.hello HelloWorld`
