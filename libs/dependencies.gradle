@@ -3,6 +3,6 @@ repositories {
 }
 
 dependencies {
-	compile 'com.punchthrough.bean.sdk:sdk:1.0.1'
+	compile 'com.punchthrough.bean.sdk:sdk:1.0.0'
 	compile group: 'com.google.guava', name: 'guava', version: '16.0'
 }
