@@ -1,14 +1,16 @@
 {
-    "version": "0.2",
-    "name": "cordova-plugin-bitalino",
-    "cordova_name": "BITalino",
-    "description": "Cordova BITalino Plugin",
+    "version": "0.1",
+    "name": "cordova-plugin-lightbluebean",
+    "cordova_name": "Lightbluebean",
+    "description": "Cordova LightBlueBean Plugin",
     "license": "Apache 2.0",
-    "repo": "https:/github.com/duxan/cordova-plugin-bitalino.git",
+    "repo": "https:/github.com/duxan/cordova-plugin-lightbluebean.git",
     "issue": "",
     "keywords": [
         "cordova",
-        "bitalino"
+        "lightblue",
+        "ble",
+        "punchthrough"
     ],
     "platforms": [
         "android",
